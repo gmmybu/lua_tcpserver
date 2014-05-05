@@ -1,6 +1,6 @@
 lua_tcpserver
 =============
-baseed on @lua5.2.3 and @luasocket
+based on @lua5.2.3, @luasocket and @luaOO
 
 similar to tornado, but simpler
 
