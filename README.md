@@ -9,3 +9,8 @@ fork a coroutine for each connection to serve, network operations are none-block
 application.lua is just a demo.
 
 quality is not guaranteed, enjoy it.
+
+application.lua requires @luajson
+
+
+some problem, connection establishing is quite slow, maybe because of select model
