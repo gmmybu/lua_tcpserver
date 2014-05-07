@@ -294,7 +294,9 @@ function Timeout:reset(delay)
 end
 
 function add_timeout(callback, delay)
-  table_insert(_timeouts, Timeout(callback, delay))
+  local timeout = Timeout(callback, delay)
+  table_insert(_timeouts, timeout)
+  return timeout
 end
 
 function del_timeout(timeout)
@@ -313,8 +315,6 @@ function main_loop(app, port)
   end
   
   server:settimeout(0.001)
-  server:accept() --文档说先accept再select
-  
   recvset.insert(server)
   
   while not app.stopped do
